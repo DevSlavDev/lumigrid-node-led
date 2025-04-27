@@ -1,70 +1,60 @@
-# 💡 lumigrid-node-led: Control Your LEDs with Precision! 💡
+# ✨ LumiGrid - LED Controller Node ✨
 
-Welcome to the lumigrid-node-led repository! 🚀 This is where the magic happens for controlling your addressable LED strips and PWM channels with the ESP32. Get ready to create dazzling lighting effects! 🌈
+---
 
-This node is part of the LumiGrid ecosystem, brought to you by Cube & Reclame Fabriek, with development led by DevSlavDev.
+## 💡 What is this Node?
 
-## 📂 What's Inside?
+This is the heart of the LumiGrid lighting control! ❤️ The LED Controller Node is built on the versatile ESP32 platform and is dedicated to bringing your lighting ideas to life, from dazzling addressable effects to subtle static colors. ✨🌈💡
 
-This repository contains everything you need to build and deploy the LED Controller Node:
+Developed with passion by **DevSlavDev** 👨‍💻 in collaboration with **Cube & Reclame Fabriek** 🏢.
 
-* `app/`:  Source code for the ESP32 firmware (C++ with ESP-IDF). This includes the custom effect engine and web server. 💻
-* `web/`:  Node-specific web UI components for controlling LED effects and settings. 💅
-* `config/`:  Default configuration files for the LED Node. ⚙️
-* `scripts/`:  Scripts for building and deploying the firmware to the ESP32. 🛠️
-* `README.md`:  That's me! 👋 Your guide to this repository.
+---
 
-## 🛠️ Project Structure
+## 🚀 Key Features
 
-Here's how things are organized:
+* **Addressable LED Control:** Drive addressable LED strips (like WS2812B, SK6812) with high precision using the ESP32's RMT peripheral! 🎇
+    * **2 Independent Channels:** Control up to two separate addressable strips or configurations! 💪
+* **PWM Output:** Control standard 12V/24V LED strips, spotlights, or other dimmable loads.
+    * **5 PWM Channels:** Specifically designed for **R/G/B/W/WW** configurations, offering full-spectrum control! 💡🟡🔵🟢🔴⚪
+* **Integrated Sequencer Control:** Each addressable and PWM channel appears as its own sub-track in the main LumiGrid sequencer.
+    * **Independent Sequencing:** Sequence each channel separately for complex and dynamic lighting scenes! 🎬
+    * **Channel Enable Buttons:** Easily enable or disable individual channels directly from the UI! ☑️
+* **Addressable Display Capability:** Can also handle basic addressable display functions, sharing some core logic with the Display Node. 🔢
+* **Control Modes:** Supports External (Art-Net, MQTT), Sync (Master/Slave), and Independent modes. 🚦
+* **Calendar-Based Playback:** Equipped with an RTC for scheduled sequences. 🗓️
+* **REST API & Web UI:** Configurable and controllable via local network. 🌐
 
-lumigrid-node-led/
-├── app/        💻 (ESP32 Firmware)
-├── web/        💅 (Web UI)
-├── config/     ⚙️ (Configuration)
-├── scripts/    🛠️ (Build/Deploy Scripts)
-└── README.md   📖 (You are here!)
+---
 
+## 🧠 Technology Stack
 
-## 🔗 Related Repositories
+* **Hardware:** ESP32-WROOM 🤖
+* **Firmware:** ESP-IDF (C++)
+* **Peripherals:** RMT for Addressable LEDs, I2C for PWM chip.
+* **Communication:** WiFi, HTTP/REST, mDNS, UDP (for Sync).
 
-* [LumiGrid (Main Repository)](https://github.com/DevSlavDev/LumiGrid):  Contains shared resources and documentation. 🧠
+---
 
-## ✨ Features
+## 🚧 Work In Progress (WIP)! 🚧
 
-* Controls up to 5 addressable LED strips. [cite: 26]
-* Drives 16 PWM channels. [cite: 26]
-* Supports popular addressable LED types (WS2812B, SK6812, etc.). [cite: 27]
-* Provides a web interface and REST API for easy control. [cite: 28]
-* Uses presets to define LED effects. [cite: 28]
+This node is currently under active development. 🌱 We are working on implementing the core control logic, the custom effect engine, and seamless integration with the sequencer and API.
 
-## 🚀 Getting Started
+Currently focusing on getting the core Display Node and Sync working first, but this node is next up for the ESP32 phase! 💪
 
-1.  **Clone this repository:**
+---
 
-    ```bash
-    git clone [https://github.com/DevSlavDev/lumigrid-node-led.git](https://github.com/DevSlavDev/lumigrid-node-led.git)
-    cd lumigrid-node-led
-    ```
+## 🤝 Contributions
 
-2.  **Set up your ESP32 development environment:** You'll need the ESP-IDF framework.
+Currently, contributions are not being actively accepted for this specific node. We are focusing on building the core system structure.
 
-3.  **Explore the code in the `app/` directory.**
+**HOWEVER!** We are building this with future collaboration in mind! 🎉 Once the main code is complete and stable, we plan to open up contributions. Keep an eye on the main LumiGrid repository for updates! 👀
 
-4.  **Build and flash the firmware to your ESP32.**
+---
 
-5.  **Use the web UI to control your LEDs!**
+## 🔗 Stay Tuned!
 
-## 🤝 Contributing
+Follow the main LumiGrid repository for updates on our progress! 😊
 
-Contributions are welcome! If you have improvements to the LED effects, web interface, or any other part of the project, please submit a pull request. 💪
+---
 
-## 🐛 Issues
-
-Please report any bugs or issues in this repository.
-
-## 📜 License
-
-\[License information will go here]
-
-## Let's make some awesome light shows! ✨
+Made with ❤️ by DevSlavDev for Cube & Reclame Fabriek
